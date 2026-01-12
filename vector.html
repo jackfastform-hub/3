@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小猫·矢量图形 | Summer创意作品集</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- 横幅 - 小猫玩球动图（免费CDN） -->
+  <header class="header-banner">
+    <img src="https://cdn-icons-png.flaticon.com/128/1074/1074226.gif" alt="玩球的小猫" class="banner-gif gif-cat">
+    <h1>矢量图形作品</h1>
+    <p>Adobe Illustrator 技能与创作</p>
+  </header>
+
+  <!-- 动物主题导航栏 -->
+  <nav class="nav-bar">
+    <ul class="nav-list">
+      <li>
+        <a href="index.html" class="nav-link" onclick="playSound('dogSound')">
+          <img src="https://cdn-icons-png.flaticon.com/128/2372/2372128.png" alt="小狗图标" class="nav-icon">
+          小狗·首页
+        </a>
+      </li>
+      <li>
+        <a href="vector.html" class="nav-link active" onclick="playSound('catSound')">
+          <img src="https://cdn-icons-png.flaticon.com/128/1074/1074226.png" alt="小猫图标" class="nav-icon">
+          小猫·矢量图形
+        </a>
+      </li>
+      <li>
+        <a href="audio.html" class="nav-link" onclick="playSound('rabbitSound')">
+          <img src="https://cdn-icons-png.flaticon.com/128/541/541575.png" alt="小兔图标" class="nav-icon">
+          小兔·音频编辑
+        </a>
+      </li>
+      <li>
+        <a href="aftereffects.html" class="nav-link" onclick="playSound('squirrelSound')">
+          <img src="https://cdn-icons-png.flaticon.com/128/1871/1871311.png" alt="松鼠图标" class="nav-icon">
+          松鼠·AE动效
+        </a>
+      </li>
+      <li>
+        <a href="contact.html" class="nav-link" onclick="playSound('duckSound')">
+          <img src="https://cdn-icons-png.flaticon.com/128/1646/1646377.png" alt="小鸭图标" class="nav-icon">
+          小鸭·联系我们
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- 核心内容 -->
+  <main class="container">
+    <section class="card">
+      <h2>矢量图形作业1：基础形状与色彩</h2>
+      <img src="资源文件夹/vector1.jpg" alt="矢量作业1" title="基础形状与色彩练习">
+      <p>这是我第一次使用Adobe Illustrator制作矢量图形，练习了形状调整、描边粗细修改、色彩搭配等基础技能。</p>
+      <p>虽然是入门作业，但我花费了很多时间尝试不同的形状组合和布局，也是我建立矢量设计基础的重要作品。</p>
+    </section>
+
+    <section class="card">
+      <h2>矢量图形作业3：钢笔工具练习</h2>
+      <img src="资源文件夹/vector3-1.jpg" alt="心形设计" title="平滑曲线练习">
+      <img src="资源文件夹/vector3-2.jpg" alt="小狗设计" title="图层顺序与转折点">
+      <p>这个作业专注于练习Illustrator的钢笔工具，心形设计比较简单，主要是平滑曲线的把控；小狗设计则更有挑战，尤其是转折点和图层顺序的调整。</p>
+      <p>通过这个作业，我对曲线控制和图层逻辑有了更清晰的理解，为后续复杂作品打下了基础。</p>
+    </section>
+
+    <section class="card">
+      <h2>矢量图形总结作业：叶周人像插画</h2>
+      <img src="资源文件夹/vector-summative.jpg" alt="叶周矢量人像" title="名人矢量肖像">
+      <p>这个作业要求用Illustrator制作名人矢量肖像，我选择了叶周作为创作对象。从画布设置、参考图导入，到比例辅助线添加，再到钢笔工具勾勒轮廓，每一步都力求精准。</p>
+      <p>最难的部分是阴影的自然呈现，我通过复习课堂教程，用路径查找器工具添加光影层次，最终完成了这幅无轮廓的扁平化人像。</p>
+
+      <!-- 创作延时视频（外部链接+渐入效果） -->
+      <div class="video-external-container">
+        <div class="video-placeholder">
+          <div class="loading-dot"></div>
+          <p>视频加载中...</p>
+        </div>
+        <video class="video-external" controls poster="资源文件夹/portrait-thumbnail.jpg" onloadeddata="this.classList.add('loaded')">
+          <!-- 【必改】替换为你的OneDrive/B站视频直链 -->
+          <source src="https://替换为你的视频外部链接/vector-timelapse.mp4" type="video/mp4">
+          你的浏览器不支持视频播放，请<a href="https://替换为你的视频外部链接/vector-timelapse.mp4" target="_blank">点击下载</a>查看。
+        </video>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Summer创意作品集 | 矢量作品版权归Summer所有</p>
+  </footer>
+
+  <!-- 音效函数（复用，确保无报错） -->
+  <script>
+    function playSound(soundId) {
+      const sound = document.getElementById(soundId);
+      if (sound) {
+        sound.currentTime = 0;
+        sound.play().catch(err => console.log("音效播放限制：", err));
+      }
+    }
+  </script>
+</body>
+</html>
