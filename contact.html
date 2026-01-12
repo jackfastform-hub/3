@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小鸭·联系我们 | Summer创意作品集</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- 横幅 - 小鸭走路动图（免费CDN） -->
+  <header class="header-banner">
+    <img src="https://cdn-icons-png.flaticon.com/128/1646/1646377.gif" alt="走路的小鸭" class="banner-gif gif-duck">
+    <h1>联系信息</h1>
+    <p>学校与课程相关联系方式</p>
+  </header>
+
+  <!-- 动物主题导航栏 -->
+  <nav class="nav-bar">
+    <ul class="nav-list">
+      <li>
+        <a href="index.html" class="nav-link" onclick="playSound('dogSound')">
+          <img src="https://cdn-icons-png.flaticon.com/128/2372/2372128.png" alt="小狗图标" class="nav-icon">
+          小狗·首页
+        </a>
+      </li>
+      <li>
+        <a href="vector.html" class="nav-link" onclick="playSound('catSound')">
+          <img src="https://cdn-icons-png.flaticon.com/128/1074/1074226.png" alt="小猫图标" class="nav-icon">
+          小猫·矢量图形
+        </a>
+      </li>
+      <li>
+        <a href="audio.html" class="nav-link" onclick="playSound('rabbitSound')">
+          <img src="https://cdn-icons-png.flaticon.com/128/541/541575.png" alt="小兔图标" class="nav-icon">
+          小兔·音频编辑
+        </a>
+      </li>
+      <li>
+        <a href="aftereffects.html" class="nav-link" onclick="playSound('squirrelSound')">
+          <img src="https://cdn-icons-png.flaticon.com/128/1871/1871311.png" alt="松鼠图标" class="nav-icon">
+          松鼠·AE动效
+        </a>
+      </li>
+      <li>
+        <a href="contact.html" class="nav-link active" onclick="playSound('duckSound')">
+          <img src="https://cdn-icons-png.flaticon.com/128/1646/1646377.png" alt="小鸭图标" class="nav-icon">
+          小鸭·联系我们
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- 核心内容 -->
+  <main class="container">
+    <section class="card">
+      <div class="contact-info">
+        <div class="contact-details">
+          <h2>King City Secondary School</h2>
+          <p>这个作品集是我在King City Secondary School的互动数字媒体课程中完成的，如需了解课程或学校信息，可通过以下方式联系：</p>
+          
+          <p><strong>地址：</strong> 2001 King Rd, King City, ON L7B 1K2</p>
+          <p><strong>电话：</strong> <a href="tel:(905)833-5332" class="contact-link">(905) 833-5332</a></p>
+          <p><strong>邮箱：</strong> <a href="mailto:king.city.ss@yrdsb.ca" class="contact-link">king.city.ss@yrdsb.ca</a></p>
+          <p><strong>学校官网：</strong> <a href="https://www.yrdsb.ca/schools/king.city.ss/Pages/default.aspx" class="contact-link" target="_blank">King City SS 官方网站</a></p>
+        </div>
+
+        <div class="contact-map">
+          <h3>学校位置</h3>
+          <img src="资源文件夹/school-map.jpg" alt="学校地图" title="King City SS 位置地图">
+          <a href="https://maps.google.com/maps?daddr=2001+King+Rd,+King+City,+ON+L7B+1K2" class="contact-link" target="_blank">获取导航路线（Google Maps）</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>课程指导老师</h2>
+      <p><strong>姓名：</strong> [填写老师姓名]</p>
+      <p><strong>邮箱：</strong> <a href="mailto:[老师邮箱@yrdsb.ca]" class="contact-link">[老师邮箱@yrdsb.ca]</a></p>
+      <p><strong>办公时间：</strong> 每周一、周三 15:00 - 16:00</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Summer创意作品集 | 联系信息归King City Secondary School所有</p>
+  </footer>
+
+  <!-- 音效函数 -->
+  <script>
+    function playSound(soundId) {
+      const sound = document.getElementById(soundId);
+      if (sound) {
+        sound.currentTime = 0;
+        sound.play().catch(err => console.log("音效播放限制：", err));
+      }
+    }
+  </script>
+</body>
+</html>
