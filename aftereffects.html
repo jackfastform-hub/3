@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>松鼠·AE动效 | Summer创意作品集</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- 横幅 - 松鼠抱坚果动图（免费CDN） -->
+  <header class="header-banner">
+    <img src="https://cdn-icons-png.flaticon.com/128/1871/1871311.gif" alt="抱坚果的松鼠" class="banner-gif gif-squirrel">
+    <h1>After Effects 动效作品</h1>
+    <p>动态图形与视觉特效创作</p>
+  </header>
+
+  <!-- 动物主题导航栏 -->
+  <nav class="nav-bar">
+    <ul class="nav-list">
+      <li>
+        <a href="index.html" class="nav-link" onclick="playSound('dogSound')">
+          <img src="https://cdn-icons-png.flaticon.com/128/2372/2372128.png" alt="小狗图标" class="nav-icon">
+          小狗·首页
+        </a>
+      </li>
+      <li>
+        <a href="vector.html" class="nav-link" onclick="playSound('catSound')">
+          <img src="https://cdn-icons-png.flaticon.com/128/1074/1074226.png" alt="小猫图标" class="nav-icon">
+          小猫·矢量图形
+        </a>
+      </li>
+      <li>
+        <a href="audio.html" class="nav-link" onclick="playSound('rabbitSound')">
+          <img src="https://cdn-icons-png.flaticon.com/128/541/541575.png" alt="小兔图标" class="nav-icon">
+          小兔·音频编辑
+        </a>
+      </li>
+      <li>
+        <a href="aftereffects.html" class="nav-link active" onclick="playSound('squirrelSound')">
+          <img src="https://cdn-icons-png.flaticon.com/128/1871/1871311.png" alt="松鼠图标" class="nav-icon">
+          松鼠·AE动效
+        </a>
+      </li>
+      <li>
+        <a href="contact.html" class="nav-link" onclick="playSound('duckSound')">
+          <img src="https://cdn-icons-png.flaticon.com/128/1646/1646377.png" alt="小鸭图标" class="nav-icon">
+          小鸭·联系我们
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- 核心内容 -->
+  <main class="container">
+    <section class="card">
+      <h2>AE入门作业：动态图形片头</h2>
+      <p>这个作业学习了After Effects的基础操作：关键帧动画、图层动画、基础视觉特效。我为“创意设计频道”制作了一个简短的动态片头，包含文字动画、形状图层和背景过渡。</p>
+      <p>最难的是让动画与背景音乐同步，以及调整关键帧插值让动作更自然，我尝试了不透明度和缩放动画来营造层次感。</p>
+
+      <!-- AE入门视频（外部链接+渐入效果） -->
+      <div class="video-external-container">
+        <div class="video-placeholder">
+          <div class="loading-dot"></div>
+          <p>视频加载中...</p>
+        </div>
+        <video class="video-external" controls poster="资源文件夹/ae-intro-thumbnail.jpg" onloadeddata="this.classList.add('loaded')">
+          <!-- 【必改】替换为你的OneDrive/B站视频直链 -->
+          <source src="https://替换为你的视频外部链接/ae-project1.mp4" type="video/mp4">
+          你的浏览器不支持视频播放，请<a href="https://替换为你的视频外部链接/ae-project1.mp4" target="_blank">点击下载</a>查看。
+        </video>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>AE总结作业：短特效片段</h2>
+      <p>总结作业要求为真人视频添加动画元素，我选择了公园散步的片段，添加了漂浮粒子、跟随镜头的文字动画，还做了色彩分级增强氛围。</p>
+      <p>这个作品让我掌握了摄像机跟踪、父子图层关系，以及辉光、粒子系统等特效的使用，最终将实拍画面与动态图形结合，讲述了一个“创意灵感”的小故事。</p>
+
+      <!-- AE总结视频（外部链接+渐入效果） -->
+      <div class="video-external-container">
+        <div class="video-placeholder">
+          <div class="loading-dot"></div>
+          <p>视频加载中...</p>
+        </div>
+        <video class="video-external" controls poster="资源文件夹/ae-summative-thumbnail.jpg" onloadeddata="this.classList.add('loaded')">
+          <!-- 【必改】替换为你的OneDrive/B站视频直链 -->
+          <source src="https://替换为你的视频外部链接/ae-summative.mp4" type="video/mp4">
+          你的浏览器不支持视频播放，请<a href="https://替换为你的视频外部链接/ae-summative.mp4" target="_blank">点击下载</a>查看。
+        </video>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Summer创意作品集 | AE作品版权归Summer所有</p>
+  </footer>
+
+  <!-- 音效函数 -->
+  <script>
+    function playSound(soundId) {
+      const sound = document.getElementById(soundId);
+      if (sound) {
+        sound.currentTime = 0;
+        sound.play().catch(err => console.log("音效播放限制：", err));
+      }
+    }
+  </script>
+</body>
+</html>
