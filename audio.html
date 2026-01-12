@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小兔·音频编辑 | Summer创意作品集</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- 横幅 - 小兔蹦跳动图（免费CDN） -->
+  <header class="header-banner">
+    <img src="https://cdn-icons-png.flaticon.com/128/541/541575.gif" alt="蹦跳的小兔" class="banner-gif gif-rabbit">
+    <h1>音频编辑作品</h1>
+    <p>配音、音效设计与创意音频制作</p>
+  </header>
+
+  <!-- 动物主题导航栏 -->
+  <nav class="nav-bar">
+    <ul class="nav-list">
+      <li>
+        <a href="index.html" class="nav-link" onclick="playSound('dogSound')">
+          <img src="https://cdn-icons-png.flaticon.com/128/2372/2372128.png" alt="小狗图标" class="nav-icon">
+          小狗·首页
+        </a>
+      </li>
+      <li>
+        <a href="vector.html" class="nav-link" onclick="playSound('catSound')">
+          <img src="https://cdn-icons-png.flaticon.com/128/1074/1074226.png" alt="小猫图标" class="nav-icon">
+          小猫·矢量图形
+        </a>
+      </li>
+      <li>
+        <a href="audio.html" class="nav-link active" onclick="playSound('rabbitSound')">
+          <img src="https://cdn-icons-png.flaticon.com/128/541/541575.png" alt="小兔图标" class="nav-icon">
+          小兔·音频编辑
+        </a>
+      </li>
+      <li>
+        <a href="aftereffects.html" class="nav-link" onclick="playSound('squirrelSound')">
+          <img src="https://cdn-icons-png.flaticon.com/128/1871/1871311.png" alt="松鼠图标" class="nav-icon">
+          松鼠·AE动效
+        </a>
+      </li>
+      <li>
+        <a href="contact.html" class="nav-link" onclick="playSound('duckSound')">
+          <img src="https://cdn-icons-png.flaticon.com/128/1646/1646377.png" alt="小鸭图标" class="nav-icon">
+          小鸭·联系我们
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- 核心内容 -->
+  <main class="container">
+    <section class="card">
+      <h2>音频广告/公益宣传作业</h2>
+      <p>这个作业要求制作2条30秒的音频广告/公益宣传，包括脚本撰写和真人配音。这是我第一次进专业录音棚，初期很紧张，最难的是控制音频时长和音效与配音的自然融合。</p>
+      <p>随着操作熟练，最终成品超出了我的预期，也让我对音频编辑有了更自信的掌控力。</p>
+
+      <!-- 内嵌环保PSA录音（本地资源，需放入资源文件夹） -->
+      <div class="audio-container">
+        <h3>公益宣传：环境保护</h3>
+        <audio controls>
+          <source src="资源文件夹/psa-environment.mp3" type="audio/mpeg">
+          你的浏览器不支持音频播放，请升级浏览器。
+        </audio>
+      </div>
+      <!-- 内嵌书店广告录音 -->
+      <div class="audio-container">
+        <h3>商业广告：书店推广</h3>
+        <audio controls>
+          <source src="资源文件夹/commercial-bookstore.mp3" type="audio/mpeg">
+          你的浏览器不支持音频播放，请升级浏览器。
+        </audio>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>电影音频编辑总结作业：料理鼠王</h2>
+      <p>这个作业要求为无声电影片段添加音效，我选择了《料理鼠王》的片段。最难的是捕捉画面细节，为每个动作匹配合适的音效，比如撒调料的声音、厨具碰撞的声音。</p>
+      <p>我还加入了环境背景音增强氛围，虽然过程繁琐，但最终的音效配合让片段更生动，我也很满意这个结果。</p>
+
+      <!-- 料理鼠王视频（外部链接+渐入效果） -->
+      <div class="video-external-container">
+        <div class="video-placeholder">
+          <div class="loading-dot"></div>
+          <p>视频加载中...</p>
+        </div>
+        <video class="video-external" controls poster="资源文件夹/ratatouille-thumbnail.jpg" onloadeddata="this.classList.add('loaded')">
+          <!-- 【必改】替换为你的OneDrive/B站视频直链 -->
+          <source src="https://替换为你的视频外部链接/ratatouille-audio.mp4" type="video/mp4">
+          你的浏览器不支持视频播放，请<a href="https://替换为你的视频外部链接/ratatouille-audio.mp4" target="_blank">点击下载</a>查看。
+        </video>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>研究作业：免费APP的隐藏风险（TikTok）</h2>
+      <img src="资源文件夹/tiktok-data1.jpg" alt="TikTok下载数据" title="2020年TikTok全球下载量">
+      <img src="资源文件夹/tiktok-data2.jpg" alt="TikTok系统下载量" title="Android vs iOS下载量">
+      <p>这个作业我选择了TikTok的隐藏风险作为研究主题，深入分析了隐私泄露、算法操控、心理健康影响、虚假信息传播等问题。</p>
+      <p>通过查阅新闻和数据，我不仅了解了TikTok的影响力，也掌握了社交媒体安全使用的技巧，对数字媒体的双面性有了更全面的认知。</p>
+
+      <!-- PDF链接（本地资源，需放入资源文件夹） -->
+      <a href="资源文件夹/Summer Zheng_Dangers of Free Apps.pdf" class="contact-link" target="_blank">查看完整研究报告（PDF）</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Summer创意作品集 | 音频作品版权归Summer所有</p>
+  </footer>
+
+  <!-- 音效函数 -->
+  <script>
+    function playSound(soundId) {
+      const sound = document.getElementById(soundId);
+      if (sound) {
+        sound.currentTime = 0;
+        sound.play().catch(err => console.log("音效播放限制：", err));
+      }
+    }
+  </script>
+</body>
+</html>
